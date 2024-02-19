@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun storeDataIntoLocal(task_name: String, task_desc: String) {
-//        Toast.makeText(this, task_name, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, task_name, Toast.LENGTH_SHORT).show()
         val sharedPreferences = getSharedPreferences("taskDB", MODE_PRIVATE)
         val addTaskList = sharedPreferences.edit()
         addTaskList.putString("TaskName", task_name)
