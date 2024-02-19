@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.dhanshree.selftrack.Models.TaskList
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun storeDataIntoLocal(task_name: String, task_desc: String) {
-        Toast.makeText(this, task_name, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, task_name, Toast.LENGTH_SHORT).show()
         val sharedPreferences = getSharedPreferences("taskDB", MODE_PRIVATE)
         val addTaskList = sharedPreferences.edit()
         addTaskList.putString("TaskName", task_name)
